@@ -1,11 +1,11 @@
 <launch>
-    <node pkg="lidar_perception" name="ros_esdcan_bridge" type="ros_esdcan_bridge" ns="esdcan_channel_1" output="screen">
+    <node pkg="ros_esdcan_bridge" name="ros_esdcan_bridge" type="ros_esdcan_bridge" ns="esdcan_channel_1" output="screen">
         <param name="can_circuit_id" value="1" />
         <param name="can_bit_rate" value="500000" />
         <param name="rx_queuesize" value="32" />
         <param name="tx_queuesize" value="32" />
     </node>
-    <node pkg="lidar_perception" name="ros_esdcan_bridge" type="ros_esdcan_bridge" ns="esdcan_channel_2" output="screen">
+    <node pkg="ros_esdcan_bridge" name="ros_esdcan_bridge" type="ros_esdcan_bridge" ns="esdcan_channel_2" output="screen">
         <param name="can_circuit_id" value="2" />
         <param name="can_bit_rate" value="500000" />
         <param name="rx_queuesize" value="32" />
