@@ -1,12 +1,14 @@
 # ros esdcan bridge
+## Introduction
+This package provide a simple interface to libntcan, and converting tools for CAN message.
 
-## dependency
+## Dependency
 * libntcan   
   http://www.esdshanghai.com/esd_download.html
 * jsoncpp    
   https://github.com/open-source-parsers/jsoncpp
 
-## build
+## Build
 ```bash
 mkdir -p catkin_ws/src
 cd catkin_ws/src
@@ -15,13 +17,14 @@ cd ../..
 catkin_make
 ```
 
-## usage
+## Usage
 ```bash
 source catkin_ws/devel/setup.bash
 roslaunch ros_esdcan_bridge ros_esdcan_bridge.launch 
 ```
 
-## configuration
+## Configuration
+write your configuration in the launch file.
 ```xml
 <!-- one node per can channel -->
 <node pkg="ros_esdcan_bridge" name="ros_esdcan_bridge" type="ros_esdcan_bridge" ns="esdcan_channel_1" output="screen">
