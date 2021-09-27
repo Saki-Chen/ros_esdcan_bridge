@@ -2,7 +2,7 @@
 #include <chrono>
 #include <ros/ros.h>
 #include <can_msgs/Frame.h>
-#include <can_io.h> 
+#include <ros_esdcan_bridge/can_io.h>
 
 using namespace esdcan;
 
@@ -32,7 +32,7 @@ public:
         return _is_ready;
     }
 
-    ~RosEsdcanBridge(){_can_tx_thread.join();}
+    ~RosEsdcanBridge(){if(this->isReady()) _can_tx_thread.join();}
 private:
 
     void _can_rx_handler(const can_msgs::FrameConstPtr& msg)

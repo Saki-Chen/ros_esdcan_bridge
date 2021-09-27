@@ -6,7 +6,12 @@ This package provide a simple interface to libntcan, and converting tools for CA
 * libntcan   
   http://www.esdshanghai.com/esd_download.html
 * jsoncpp    
-  https://github.com/open-source-parsers/jsoncpp
+  https://github.com/open-source-parsers/jsoncpp   
+  or
+  ```bash
+  sudo apt update
+  sudo apt install libjsoncpp-dev
+  ```
 
 ## Build
 ```bash

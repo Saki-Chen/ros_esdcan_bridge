@@ -1,5 +1,4 @@
-#ifndef CAN_ENCODE_DECODE_INL_H_
-#define CAN_ENCODE_DECODE_INL_H_
+#pragma once
 
 // original at https://github.com/reinzor/libcan-encode-decode
 
@@ -167,5 +166,3 @@ inline void storeIQ(uint8_t* frame, double value, uint8_t start, uint8_t length,
 {
   storeSignal(frame, value * pow(2, float_length), start, length, is_big_endian, is_signed);
 }
-
-#endif
